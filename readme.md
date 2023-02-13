@@ -5,13 +5,16 @@ I'm a cyber security consultant and an enthusiast software developer from Italy 
 - 🔭 I’m currently working on [Argon programming language](https://github.com/argonlang/argon).
 
 ```js
-import enum
+import "enum"
+import "io"
 
 let NOBLE_GAS = ["Helium", "Neon", "Argon", "Krypton", "Xenon"]
 
-NOBLE_GAS |> enum.group_by((itm) => {
-    return itm |> len
-}) |> println
+var group_by_name_length = enum.group_by(len)
+
+NOBLE_GAS
+    |> group_by_name_length
+    |> io.print
 
 /* {6: [Helium], 4: [Neon], 5: [Argon, Xenon], 7: [Krypton]} */
 ```
